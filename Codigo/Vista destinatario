@@ -1,0 +1,101 @@
+<?php
+       $alert = '';
+        session_start();
+
+           
+                if ($_SESSION['rol'] !=3) {
+                   header('location: ../../proyecto_siramec/inicio.php');
+                }
+             
+            
+               ?>
+            
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!-- Title -->
+    <title>Siramec | Bienvenidos Destinatario</title>
+    <script src="https://kit.fontawesome.com/62ea397d3a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+    <!-- Favicon -->
+    <link rel="icon" href="img/core-img/SIRAMEC.jpg">
+    <!-- Core Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <?php include "funciones.php"; ?>
+</head>
+
+<body>
+    <!-- ##### Preloader ##### -->
+    <div id="preloader">
+        <i class="circle-preloader"></i>
+    </div>
+
+    <!-- ##### Header Area Start ##### -->
+    <header class="header-area">
+
+        <!-- Top Header Area -->
+        <div class="top-header">
+            <div class="container h-100">
+                <div class="row h-100">
+                    <div class="col-12 h-100">
+                        <div class="header-content h-100 d-flex align-items-center justify-content-between">
+                            <div class="academy-logo">
+                                <a href="index.html"><img src="img/core-img/SIRAMEC.jpg" width="80px"  alt=""></a>
+                            </div>
+                            <div class="login-content">
+                            <i class="fecha">Colombia, <?php echo fechaC(); ?></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp <span> <?php echo $_SESSION['user'] ?> - <span><?php echo $_SESSION['rol'] ?>
+                            -Destinatario</span></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="sali.php" title="Salir"><i class="fas fa-power-off"></i></a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navbar Area -->
+        <div class="academy-main-menu">
+            <div class="classy-nav-container breakpoint-off">
+                <div class="container">
+                    <!-- Menu -->
+                    <nav class="classy-navbar justify-content-between" id="academyNav">
+
+                        <!-- Navbar Toggler -->
+                        <div class="classy-navbar-toggler">
+                            <span class="navbarToggler"><span></span><span></span><span></span></span>
+                        </div>
+
+                        <!-- Menu -->
+                        <div class="classy-menu">
+
+                            <!-- close btn -->
+                            <div class="classycloseIcon">
+                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                            </div>
+
+                            <!-- Nav Start -->
+                            <div class="classynav">
+                                <ul>
+                                    <li><a href="index.html">Inicio</a></li>
+                                    
+                                        
+                                        
+                                        <li><a href="#">Pedidos</a>
+                                            <ul class="dropdown">
+                                                <li><a href="Formularioped/index.php">Nuevo Pedido </a></li>
+                                                <li><a href="listapedidos.php">lista pedido</a></li>
+                                                
+                                            </ul>
+                                        </li>
+                                        <li><a href="listapedidos.php">Factura</a></li>
+                                        <li><a href="producto.php">Carrito compras</a></li>
+                                        <li><a href="contact.html">Contacto</a></li>
+                                    </ul>
+                                </div>
